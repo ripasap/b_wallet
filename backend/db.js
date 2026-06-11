@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 
-const atlasPassword = encodeURIComponent("iJZ9HS!Q7CL]%y.");
-const atlasUri = `mongodb+srv://ritsom2309_db_user:${atlasPassword}@cluster0.dx7tu59.mongodb.net/paytm?retryWrites=true&w=majority`;
-
+const mongodbPW = process.env.MONGO_PASSWORD;
+const mongoUser = process.env.MONGO_USER;
+const atlasPassword = encodeURIComponent(mongodbPW);
+// const atlasUri = `mongodb+srv://ritsom2309_db_user:${atlasPassword}@cluster0.dx7tu59.mongodb.net/paytm?retryWrites=true&w=majority`;
+const atlasUri = `mongodb+srv://${mongoUser}:${atlasPassword}@cluster0.dx7tu59.mongodb.net/?appName=Cluster0`;
 async function main() {
   try {
     await mongoose.connect(atlasUri, {

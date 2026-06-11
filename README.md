@@ -28,7 +28,7 @@ To run this project locally, you will need to start both the backend server and 
 
 ### 1. Setup Backend
 
-Navigate to the `backend` directory, install dependencies, and start the development server:
+Navigate to the `backend` directory, create a `.env` file using `.env.example`, install dependencies, and start the development server:
 
 ```bash
 cd backend
