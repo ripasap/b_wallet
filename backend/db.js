@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const mongodbPW = process.env.MONGO_PASSWORD;
 const mongoUser = process.env.MONGO_USER;
 const atlasPassword = encodeURIComponent(mongodbPW);
-// const atlasUri = `mongodb+srv://ritsom2309_db_user:${atlasPassword}@cluster0.dx7tu59.mongodb.net/paytm?retryWrites=true&w=majority`;
 const atlasUri = `mongodb+srv://${mongoUser}:${atlasPassword}@cluster0.dx7tu59.mongodb.net/?appName=Cluster0`;
 async function main() {
   try {
@@ -19,18 +18,7 @@ async function main() {
 }
 
 main();
-// async function main() {
-//   try {
-//     await mongoose.connect("mongodb://localhost:27017/paytm");
-//     // await mongoose.connect('mongodb://127.0.0.1:/yelpCamp');
-//     console.log("WE'RE CONNECTED")
-//   } catch (e) {
-//     console.log("OH NO! ERROR");
-//     console.log(e);
-//   }
-//   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-// }
-// main();
+
 const userSchema = mongoose.Schema({
   username: {
     type: String,
