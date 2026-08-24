@@ -1,6 +1,6 @@
-# basic_wallet
+# b_wallet
 
-A basic, conceptual MERN-stack web wallet featuring a retro-terminal UI. 
+A conceptual MERN-stack web wallet featuring a retro-terminal UI. 
 
 **Note:** This project is a conceptual UI/UX showcase and does not function as a real financial wallet.
 
